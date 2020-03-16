@@ -6,13 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".admin_dashboard"
     android:orientation="vertical"
-    android:background="#fcfcfc"
-    android:padding="10dp"
+    android:background="@drawable/backhome"
+    android:padding="0dp"
+    android:layout_margin="0dp"
     android:gravity="center">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/backhome3">
+     >
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -22,13 +23,13 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:clipToPadding="false">
                 <androidx.cardview.widget.CardView
                     android:id="@+id/add"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
-                    android:layout_width="170dp"
+                    android:layout_width="160dp"
                     android:layout_height="190dp"
                     android:layout_margin="10dp">
                     <LinearLayout

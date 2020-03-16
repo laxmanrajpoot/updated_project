@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">Collage Automation</string>
     <string-array name="users">
-        <item>Admin</item>
-        <item>Faculty</item>
         <item>Student</item>
+        <item>Faculty</item>
+        <item>Admin</item>
+
 
     </string-array>
     <string name="title_activity_sign_in">Sign in</string>

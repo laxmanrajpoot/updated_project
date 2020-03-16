@@ -25,7 +25,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
 
 
+
     }
+
 
 
     @Override
@@ -33,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         final Intent intent;
         switch (position) {
             case 0:
-                intent = new Intent(this, login.class);
+                intent = new Intent(this, student_login.class);
                 startActivity(intent);
                 break;
             case 1:
@@ -41,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 startActivity(intent);
                 break;
             case 2:
-                intent = new Intent(MainActivity.this, student_login.class);
+                intent = new Intent(MainActivity.this, login.class);
                 startActivity(intent);
                 break;
 

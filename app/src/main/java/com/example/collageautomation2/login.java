@@ -2,6 +2,7 @@ package com.example.collageautomation2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -16,13 +17,19 @@ Button sign_in;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         addListenerOnButton();
+        assert getSupportActionBar() != null;   //null check
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+    @Override
+    public boolean onSupportNavigateUp(){
+        finish();
+        return true;
     }
 
     public void addListenerOnButton() {
         sign_in = (Button) findViewById(R.id.sign_in);
         final EditText username = (EditText) findViewById(R.id.email);
         final EditText password = (EditText) findViewById(R.id.password);
-
         sign_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.collageautomation2">
+
 
     <application
         android:allowBackup="true"
@@ -10,20 +12,51 @@
         android:supportsRtl="true"
         android:screenOrientation="portrait"
         android:theme="@style/ThemeWeather">
-        <activity android:name=".faculty_login"></activity>
-        <activity android:name=".student_login" />
-        <activity android:name=".student_signup" />
-        <activity android:name=".admin_dashboard" />
-        <activity android:name=".upload" />
-        <activity android:name=".sendfeedback" />
-        <activity android:name=".send_syllabus" />
-        <activity android:name=".send_notification" />
-        <activity android:name=".faculty_dashboard" />
-        <activity android:name=".download" />
-        <activity android:name=".dashboard" />
-        <activity android:name=".sign_up" />
-        <activity android:name=".login" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".faculty_login"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".student_login"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity android:name=".student_signup"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity android:name=".admin_dashboard"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity android:name=".upload"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity android:name=".sendfeedback"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity android:name=".send_syllabus"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity android:name=".send_notification"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity android:name=".faculty_dashboard"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity android:name=".download"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity android:name=".dashboard"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity android:name=".sign_up"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity android:name=".login"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
