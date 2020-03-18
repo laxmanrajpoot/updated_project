@@ -2,19 +2,86 @@ package com.example.collageautomation2;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 public class dashboard extends AppCompatActivity {
-
+CardView notes,assignment,chat,notification,feedback,quiz,logout,paper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
         assert getSupportActionBar() != null;   //null check
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        notes=(CardView)findViewById(R.id.notes);
+        assignment=(CardView)findViewById(R.id.assignment);
+        chat=(CardView)findViewById(R.id.chat);
+        notification=(CardView)findViewById(R.id.notification);
+        feedback=(CardView)findViewById(R.id.feedback);
+        quiz=(CardView)findViewById(R.id.quiz);
+        logout=(CardView)findViewById(R.id.logout);
+        paper=(CardView)findViewById(R.id.paper);
+        notes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(dashboard.this, download.class);
+                startActivity(intent);
+            }
+
+        });
+        assignment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(dashboard.this, assignment.class);
+                startActivity(intent);
+            }
+        });
+        chat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(dashboard.this, chat.class);
+                startActivity(intent);
+            }
+        });
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(dashboard.this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
+        paper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(dashboard.this, paper.class);
+                startActivity(intent);
+            }
+        });
+        feedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(dashboard.this, sendfeedback.class);
+                startActivity(intent);
+            }
+        });
+        quiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //
+            }
+        });
+        notification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(dashboard.this, notification.class);
+                startActivity(intent);
+            }
+        });
     }
     @Override
     public boolean onSupportNavigateUp(){
@@ -37,5 +104,6 @@ public class dashboard extends AppCompatActivity {
                     }
                 }).setNegativeButton("no", null).show();
     }
+
 
 }

@@ -278,7 +278,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/exit"
+                    android:id="@+id/logout"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
                     android:layout_width="160dp"
@@ -300,7 +300,7 @@
                             android:textStyle="bold"
                             android:layout_marginTop="10dp"
                             android:textSize="20dp"
-                            android:text="Exit"/>
+                            android:text="Log Out"/>
                         />
 
                     </LinearLayout>
