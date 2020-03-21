@@ -11,11 +11,25 @@ import android.widget.Toast;
 
 public class faculty_login extends AppCompatActivity {
 Button sign_in;
+EditText username,password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faculty_login);
-        addListenerOnButton();
+         username = (EditText) findViewById(R.id.email);
+         password = (EditText) findViewById(R.id.password);
+         sign_in=(Button)findViewById(R.id.sign_in);
+         sign_in.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 Intent i=new Intent(faculty_login.this,faculty_dashboard.class);
+                 startActivity(i);
+
+             }
+         });
+
+
         assert getSupportActionBar() != null;   //null check
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
@@ -24,34 +38,10 @@ Button sign_in;
         finish();
         return true;
     }
-    public void addListenerOnButton() {
-        sign_in = (Button) findViewById(R.id.sign_in);
-        final EditText username = (EditText) findViewById(R.id.email);
-        final EditText password = (EditText) findViewById(R.id.password);
-        sign_in.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
 
-                if (username.getText().toString().equals("laxmanyaduvanshi2@gmail.com") && password.getText().toString().equals("f")) {
 
-                    Intent intent = new Intent(faculty_login.this, faculty_dashboard.class);
-                    startActivity(intent);
-                } else if (username.getText().toString().equals("laxmanyaduvanshi2@gmail.com") && password.getText().toString().equals(null)) {
-                    Toast.makeText(getApplicationContext(), "Enter password", Toast.LENGTH_SHORT).show();
 
-                } else if (username.getText().toString().equals(null) && password.getText().toString().equals(null)) {
-                    Toast.makeText(getApplicationContext(), "Enter id and password", Toast.LENGTH_SHORT).show();
-                } else if (username.getText().toString().equals(null) && password.getText().toString().equals(null)) {
-                    Toast.makeText(getApplicationContext(), "Enter email", Toast.LENGTH_SHORT).show();
-
-                } else {
-
-                    Toast.makeText(getApplicationContext(), "Invalid id and password", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-    }
 
 
 }

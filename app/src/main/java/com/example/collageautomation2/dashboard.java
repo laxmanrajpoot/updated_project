@@ -6,6 +6,7 @@ import androidx.cardview.widget.CardView;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
@@ -58,7 +59,8 @@ CardView notes,assignment,chat,notification,feedback,quiz,logout,paper;
         paper.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(dashboard.this, paper.class);
+                Uri uri = Uri.parse("https://accounts.google.com/signin/v2/identifier?service=writely&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"); // missing 'http://' will cause crashed
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }
         });
@@ -69,12 +71,6 @@ CardView notes,assignment,chat,notification,feedback,quiz,logout,paper;
                 startActivity(intent);
             }
         });
-        quiz.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //
-            }
-        });
         notification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,6 +78,7 @@ CardView notes,assignment,chat,notification,feedback,quiz,logout,paper;
                 startActivity(intent);
             }
         });
+
     }
     @Override
     public boolean onSupportNavigateUp(){

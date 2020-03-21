@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.collageautomation2">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,13 +14,26 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/ThemeWeather">
-        <activity android:name=".notification"
+        <activity android:name=".faculty_dashboard"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".paper"
+        <activity android:name=".feedback"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".chat"
+        <activity
+            android:name=".chat1"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".notification"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".paper"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".chat"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
@@ -60,10 +76,6 @@
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".send_notification"
-            android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity" />
-        <activity
-            android:name=".faculty_dashboard"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
