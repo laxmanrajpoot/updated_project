@@ -11,7 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class dashboard extends AppCompatActivity {
-CardView notes,assignment,chat,notification,feedback,quiz,logout,paper;
+    CardView notes,assignment,chat,notification,feedback,quiz,logout,paper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

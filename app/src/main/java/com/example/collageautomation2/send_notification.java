@@ -9,12 +9,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class send_notification extends AppCompatActivity {
-FloatingActionButton share;
-EditText write;
+    FloatingActionButton share;
+    EditText write;
+    demo d;
+
+    DatabaseReference rootRef;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,15 +29,21 @@ EditText write;
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         share= (FloatingActionButton) findViewById(R.id.share);
         write=(EditText)findViewById(R.id.write);
+        d=new demo();
+        rootRef = FirebaseDatabase.getInstance().getReference("demo");
+
         share.setOnClickListener(new View.OnClickListener() {
+
+
             @Override
             public void onClick(View v) {
-                String str = write.getText().toString();
+                String notification =write.getText().toString().trim();
+                d.setNotification(notification);
+                rootRef.push().setValue(d);
+                write.setText(null);
+                Toast.makeText(send_notification.this, "send sucessfully", Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(getApplicationContext(), notification.class);
-                intent.putExtra("message", str);
 
-                startActivity(intent);
             }
         });
     }

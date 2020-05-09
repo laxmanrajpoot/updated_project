@@ -11,7 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class faculty_dashboard extends AppCompatActivity {
-CardView assignment,chat,notification,feedback,quiz,paper,logout,add,share;
+    CardView assignment,chat,notification,feedback,quiz,paper,logout,add,share;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,7 +72,7 @@ CardView assignment,chat,notification,feedback,quiz,paper,logout,add,share;
         share.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(faculty_dashboard.this,upload.class);
+                Intent i=new Intent(faculty_dashboard.this,sendpdf.class);
                 startActivity(i);
             }
         });

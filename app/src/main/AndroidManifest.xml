@@ -14,10 +14,13 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/ThemeWeather">
-        <activity android:name=".faculty_dashboard"
+        <activity android:name=".sendpdf"></activity>
+        <activity
+            android:name=".faculty_dashboard"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".feedback"
+        <activity
+            android:name=".feedback"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
